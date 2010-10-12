@@ -1,0 +1,10 @@
+<section id="posts">
+<% for article in articles[0...6] %>
+<article>
+  <h1><%= article.title %></h1>
+  <%= article.summary %> 
+  <div class="more"><a href="<%= article.path %>">más &raquo;</a></div>
+  
+</article>
+<% end %> 
+</section> 
