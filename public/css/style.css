@@ -178,6 +178,16 @@ button {  width: auto; overflow: visible; }
      color:#848484;
      margin:15px 30px;
  }
+ #main .post .date{
+     background:#C2C2C2;
+     color: #fff;
+     padding: 2px 5px 0 5px;
+     font-size:80%;
+     font-weight:bold;
+ }
+ #main .post .content{
+     margin-top:20px;
+ }
  #sponsors{
      float:left;
      border-left:1px solid #E6E6E6;
