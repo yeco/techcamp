@@ -6,7 +6,17 @@
   <!--[if IE]><![endif]-->
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><%= title %></title>
+  
+  <title>
+  <% if @path == 'index' %>
+      TechCamp Costa Rica 2010
+  <% elsif @path.split('/').compact.length == 4 %>
+      <%= title %> - TechCamp Costa Rica 2010
+  <% else %>
+      <%= @path.capitalize.gsub(/[-]/, ' ') %> - TechCamp Costa Rica 2010
+  <% end %>
+  </title>
+  
 
   <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
   

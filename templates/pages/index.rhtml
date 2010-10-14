@@ -1,10 +1,10 @@
 <section id="home">
-    <% for article in articles[0...1] %>
+    <% for article in articles[0...3] %>
     
         <article>
           <h1><%= article.title %></h1>
           <%= article.summary %> 
-          <div class="more"><a href="<%= article.path %>">más &raquo;</a></div>
+          <div class="more"><a href="<%= article.path %>">Leer más &raquo;</a></div>
           
         </article>
     <% end %> 

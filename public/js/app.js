@@ -5,8 +5,8 @@ this.mobileTimetable ={};
 this.socialTimetable ={};
 
 var loadTimeTables = function(){
-   this.mobileTimetable = newTimetable("mobile"); 
-   this.socialTimetable = newTimetable("social"); 
+   this.mobileTimetable = new Timetable("mobile"); 
+   this.socialTimetable = new Timetable("social"); 
 } 
 var loadMobileEvents = function(){
     this.mobileTimetable.addEvent("test", 9, 0.4);
@@ -14,7 +14,8 @@ var loadMobileEvents = function(){
     this.mobileTimetable.addEvent("test2", 10, 0.4);
     this.mobileTimetable.addEvent("test3", 12, 0.4);
     this.mobileTimetable.addEvent("test4", 1, 0.4);
-    this.mobileTimetable.addEvent("test5", 3, 0.4);
+    this.mobileTimetable.addEvent("test5", 3, 0.4); 
+    this.mobileTimetable.goTo(9);
     
 }
 var loadSocialEvents = function(){
@@ -24,18 +25,20 @@ var loadSocialEvents = function(){
     this.socialTimetable.addEvent("test3", 12, 0.4);
     this.socialTimetable.addEvent("test4", 1, 0.4);
     this.socialTimetable.addEvent("test5", 3, 0.4);
+    this.socialTimetable.goTo(9);
+    
     
 }
 
 
 
 return init = {
-    app: function(){},
-    agenda: function(){
-        loadTimeTables();
-        loadMobileEvents();
-        loadSocialEvents
-        
+    app: function(){
+        if ($("article.agenda")[0]){
+            loadTimeTables();
+            loadMobileEvents();
+            loadSocialEvents() 
+        }
     }
 } 
 
@@ -43,7 +46,7 @@ return init = {
 
 })(window.jQuery);
 
-
+$(function() { init.app() });  
 
 window.log = function(){
   log.history = log.history || []; 
