@@ -39,11 +39,11 @@
     <header><a href="/"><img id="logo" src="/img/logo.png" alt="Logo"></a></header>
     <nav>
       <ul class="">
-        <li class="first"><a href="/agenda">agenda</li>
-        <li><a href="/expositores">expositores</a></li>
-		<li><a href="/direccion">direccion</a></li>
-        <li><a href="/registro">registro</a></li>
-        <li><a href="/faq">faq</a></li>
+        <li class="first"><a<%= ' class="active"' if @path == 'agenda' %> href="/agenda">agenda</li>
+        <li><a <%= ' class="active"' if @path == 'expositores' %>href="/expositores">expositores</a></li>
+		<li><a <%= ' class="active"' if @path == 'direccion' %>href="/direccion">direccion</a></li>
+        <li><a <%= ' class="active"' if @path == 'registro' %>href="/registro">registro</a></li>
+        <li><a <%= ' class="active"' if @path == 'faq' %>href="/faq">faq</a></li>
       </ul>  
     </nav>
     <section id="main" class="col_8">
