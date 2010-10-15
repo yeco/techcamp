@@ -19,6 +19,7 @@ toto = Toto::Server.new do
   # 
   # set :author,    ENV['USER']                               # blog author
   # set :root,      "index"                                   # page to load on /
+  set :title,      "TechCamp Costa Rica"                      # Title for feeds
   # set :date,      lambda {|now| now.strftime("%d/%m/%Y") }  # date format for articles
   set :markdown,  :smart                                    # use markdown + smart-mode
   set :disqus,    false #'techcampcostarica'                                     # disqus id, or false
