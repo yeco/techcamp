@@ -158,7 +158,21 @@ nav ul li a:hover{color:#fff;background-color:#A7272E;}
     line-height:10px;
     color: #D2D2D2;
 }
-  
+.expositor {
+    margin:5px 0 30px 0;
+    clear:both;
+} 
+.expositor .photo{
+    float:left;
+    width:170px;
+    height:170px;
+    overflow:hidden;
+    border:2px solid #E6E6E6;
+    margin:14px 6px 30px 0;
+    background: url('/img/no_avatar.jpg') no-repeat scroll center center;
+    
+}
+
 article{width:90%;margin-bottom:30px;padding-bottom:16px;border-bottom:1px solid #E6E6E6;}
 footer{background:#fff url('../img/bg_footer.png') no-repeat scroll top left;width:839px;height:26px;float:left;}
 /* 
