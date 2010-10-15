@@ -1,43 +1,17 @@
 
 
 (function($){
-this.mobileTimetable ={};
-this.socialTimetable ={};
-
-var loadTimeTables = function(){
-   this.mobileTimetable = new Timetable("mobile"); 
-   this.socialTimetable = new Timetable("social"); 
-} 
-var loadMobileEvents = function(){
-    this.mobileTimetable.addEvent("test", 9, 0.4);
-    this.mobileTimetable.addEvent("test1", 9, 0.4);
-    this.mobileTimetable.addEvent("test2", 10, 0.4);
-    this.mobileTimetable.addEvent("test3", 12, 0.4);
-    this.mobileTimetable.addEvent("test4", 1, 0.4);
-    this.mobileTimetable.addEvent("test5", 3, 0.4); 
-    this.mobileTimetable.goTo(9);
-    
-}
-var loadSocialEvents = function(){
-    this.socialTimetable.addEvent("test", 9, 0.4);
-    this.socialTimetable.addEvent("test1", 9, 0.4);
-    this.socialTimetable.addEvent("test2", 10, 0.4);
-    this.socialTimetable.addEvent("test3", 12, 0.4);
-    this.socialTimetable.addEvent("test4", 1, 0.4);
-    this.socialTimetable.addEvent("test5", 3, 0.4);
-    this.socialTimetable.goTo(9);
-    
-    
-}
+  var zebralize = function(){
+      $("tr:nth-child(odd)").addClass("odd");
+      $("tr:nth-child(even)").addClass("even");
+  }
 
 
 
 return init = {
     app: function(){
         if ($("article.agenda")[0]){
-            loadTimeTables();
-            loadMobileEvents();
-            loadSocialEvents() 
+          zebralize()  
         }
     }
 } 
