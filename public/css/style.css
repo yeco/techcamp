@@ -96,7 +96,7 @@ nav ul li a:hover{color:#fff;background-color:#A7272E;}
 #main .post .date{background:#C2C2C2;color:#fff;padding:2px 5px 0 5px;font-size:80%;font-weight:bold;}
 #main .post .content{margin-top:20px;}
 #sponsors{float:left;border-left:1px solid #E6E6E6;padding-left:10px;min-height:240px;}
-#sponsors .sponsor{width:230px;height:60px;border:1px solid #E6E6E6;display:block;margin-top:10px;} 
+#sponsors .sponsor{width:230px;border:1px solid #E6E6E6;display:block;margin-top:10px;} 
 .agenda table{
     margin-top:20px;
 }
