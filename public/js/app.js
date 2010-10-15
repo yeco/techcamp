@@ -5,14 +5,27 @@
       $("tr:nth-child(odd)").addClass("odd");
       $("tr:nth-child(even)").addClass("even");
   }
+  var externalize = function(){
+      $("body").delegate("a", "click", function(e){
+        var a = new RegExp('/' + window.location.host + '/');
+           if(!a.test(this.href)) {
+               e.preventDefault();
+               e.stopPropagation();
+               window.open(this.href, '_blank');
+           }
+     })
+  }
 
 
 
 return init = {
-    app: function(){
+    app: function(){ 
+        externalize();
+        
         if ($("article.agenda")[0]){
-          zebralize()  
+          zebralize();  
         }
+        
     }
 } 
 
